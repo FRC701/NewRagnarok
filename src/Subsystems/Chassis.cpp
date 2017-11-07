@@ -52,8 +52,8 @@ TankDrive* Chassis::GetTankDriveCommand(){
 }
 
 void Chassis::SetTankDrive(double left, double right) {
-  left1Wheel.Set(left);
-  right1Wheel.Set(right);
+  left1Wheel.Set(0);
+  right1Wheel.Set(0);
 }
 
 void Chassis::SetShifter(ShifterValue value){
