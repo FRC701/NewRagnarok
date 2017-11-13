@@ -9,7 +9,6 @@
 #include "Commands/Cancel.h"
 #include "Commands/GearIntake.h"
 #include "Commands/GearQuit.h"
-#include "Commands/GearScore.h"
 #include "Commands/SetGear.h"
 #include "Commands/SetGearRoller.h"
 #include "Commands/SetLifter.h"
@@ -69,7 +68,7 @@ OI::OI()
   dY.WhenPressed(new SetLifter(1.0));
   dX.WhenPressed(new SetLifter(0.5));
   dA.WhenPressed(new GearIntake());
-  dR3.WhenPressed(new GearScore);
+  dR3.WhenPressed(new GearIntake());
   dStart.WhenPressed(new ToggleGear);
   dRB.WhenPressed(new ToggleTankDriveDirection());
   dL3.WhenPressed(new SetLightFlash(3));
@@ -82,7 +81,7 @@ OI::OI()
   coA.WhenPressed(new ToggleGear);
 
   coRB.WhenPressed(new GearIntake);
-  coLB.WhenPressed(new GearScore);
+  coLB.WhenPressed(new GearIntake);
 
   coY.WhenPressed(new SetLightFlash(3));
 
